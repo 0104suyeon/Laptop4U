@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 준석 Searching engine_naver -->
+    <meta name="naver-site-verification" content="0ce5dbfcf65482cf18a07932ca8270c9a87fd953" />
+    <!-- 준석 Searching engine_google-->
+    <meta name="google-site-verification" content="t11BrmkdJD_eX-2Ker6G8o_t5IqnOrESKmj5jeejwLE" />
+    <!-- 준석 Searching engine_Bing-->
+    <meta name="msvalidate.01" content="DC71D3317BD42FCEF487C20EFDB7D210" />
+    <!-- 구글 태그 매니저 -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NSCCVGC');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- 준석 google Analytics-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RE1BX35JW4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RE1BX35JW4');
+    </script>
+    
+    <!-- 찬혁 반응형 구현 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta charset="UTF-8">
+    <!-- 찬혁 부트스트랩 연결 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- 찬혁 default.css연결 -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/default.css' %}" />
+
+    <title>Laptop 4 U</title>
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSCCVGC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+ 
+    <div class="container-fluid">
+    <section id="main">
+        <!--찬혁 팀 로고-->
+        <div class="col-lg-2 col-9 mx-auto px-3">
+            <img src="{% static 'main/images/start_page.png' %}" alt="mainImage_1" class="img-fluid">
+        </div>
+        
+        <!--찬혁 모형 노트북 -->
+        <div class="col-lg-2 col-7 mx-auto mb-3 px-5">
+            <img src="{% static 'main/images/laptop.png' %}" alt="mainImage_2" class="img-fluid">
+        </div>
+
+        <!--찬혁 노트북 추천 애니메이션 작동 -->
+        <div class="intro mx-auto col-lg-2">
+            <h1>나에게 맞는 노트북은?</h1>
+            <div class="type">
+                <ul class="type_list" style="list-style: none;">
+                    <li>MACBOOK PRO</li>
+                    <li>MACBOOK AIR M1</li>
+                    <li>SAMSUNG PRO 365</li>
+                    <li>LG GRAM</li>
+                    <li>HANSUNG COMPUTER</li>
+                    <li>HP NOTEBOOK</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--찬혁 검사 시작 버튼 -->
+        <div class="col-lg-2 col-10 mx-auto">
+            <a href=https://foru-ffsjy.run.goorm.io/details> <img src="{% static 'main/images/start_button.png' %}" class="img-fluid"></a>
+        </div>
+	    <!--찬혁 노트북 검사 현재 순위 -->
+        <div class="result_data mx-auto">
+            <div class="data_wrap col-lg-3">
+                <h3>인기 노트북</h3>
+                <ul style="list-style: none;">
+                    <li>1등: {{rank.0.name }} - {{ rank.0.count }}명</li>
+                    <li>2등: {{rank.1.name }} - {{ rank.1.count }}명</li>
+                    <li>3등: {{rank.2.name }} - {{ rank.2.count }}명</li>
+                </ul>
+            </div>	
+        </div>
+    </section>
+</div>
+</body>
+
+</html>
